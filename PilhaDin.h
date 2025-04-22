@@ -24,5 +24,15 @@ void imprime_Pilha(Pilha* pi);
 
 int push2_pilha(Pilha* pi, struct aluno al,  struct aluno a2);
 int pop2_pilha(Pilha* pi);
-
+int popN(Pilha* pi, int n);
+int NotasMedias(Pilha *pi);
+int ambasIguais(Pilha *pi1, Pilha *pi2);
+Pilha* pilha_copia(Pilha* pi);
+int Verificapalindromo(Pilha *pi);
+int reverso(Pilha *pi);
+int verifica_metade_inverso(Pilha *pi);
+int QuantImp(Pilha *pi);
+int QuantPar(Pilha *pi);
+void menu();
+void converte_binario(int num);
 #endif

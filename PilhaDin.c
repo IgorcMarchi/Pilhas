@@ -298,6 +298,29 @@ int reverso(Pilha *pi) {
 }
 
 
+int verifica_metade_inverso(Pilha *pi) {
+    if (pi == NULL || *pi == NULL) return 0;
+
+    struct aluno a;
+    if (!consulta_topo_Pilha(pi, &a)) return 0;
+
+    char *nome = a.nome;
+    int len = strlen(nome);
+
+    if (len < 2) return 1; // se for 1 ou 0 caracteres, considera diferente
+
+    int meio = len / 2;
+
+    for (int i = 0; i < meio; i++) {
+        // Compara do começo com o final
+        if (nome[i] == nome[len - 1 - i]) {
+            return 0; // encontrou caractere igual espelhado
+        }
+    }
+
+    return 1; // todos espelhados são diferentes
+}
+
 
 int QuantImp(Pilha *pi) {
     Elem* no = *pi;
